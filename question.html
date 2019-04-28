@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+     // 3. 用if判断做
+	  // 超市打折处理
+     var price=1000;
+     if(price>2000)
+     {
+        price*=0.5
+     }else if(price >1000)
+     {
+         price*=0.7
+         
+     }else if(price>500){
+         price*=0.9;
+         
+     }else if(price>100){
+         price-=10;
+     }
+     console.log("最终价格为"+price)
+    //  5. 题目如下：
+	// var a = 5;
+	// var b = 10;
+	// b = a++;
+	// 请问a和b的值分别是多少？
+    // 答：b=5 a=6
+
+    // 6. 题目如下：
+	// var a = 50;
+	// var b = 100;
+	// b = --a;
+	// 请问a和b的值分别是多少？
+    // 答：a=49 b=49
+
+    // 7. 声明一个变量，变量名：name(名字)  值：（你的名字）
+    // 在网页上弹出 这个变量
+    // 在网页上弹出 这个变量的  数据类型
+    var name ="李文康";
+    document.write(typeof(name))
+// 8. 声明一个变量，变量名：age(年龄)  值：（你的年龄）
+// 在网页上输出 这个变量
+// 在网页上输出 这个变量的  数据类型
+   var age=21;
+   document.write(typeof(age))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
