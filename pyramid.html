@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>金字塔</title>
+    <script>
+        var h=10;
+        for( var i=1 ;i<=h;i++){
+            for(var y=1;y<=(h-i)/2;y++)
+                {
+                    document.write("&ensp;")
+                    
+                }
+                if((h-i)%2==1){
+                    document.write("&nbsp;")
+                }
+            for(var j=1; j<=i;j++){
+                
+                document.write("*");
+            }
+            document.write("<br/>")
+        }
+//         <!-- 1. 对数组中的数字进行大小排序
+// 	比如有数组var arr = new Array(100,33,500,6,91)
+// 2. 自定义一个函数实现将一个字符串里面的大写字母变小写并且小写字母变大写。
+// 	stra = a~z
+// 	strA = A~Z
+// 	newStr += 'A'
+// 	var str='aBcDeFg';
+// 	结果 str1='AbCdEfG'; -->
+// <!-- 3. 写一个函数，这个函数可以通过输入任意范围比如n到m来返回n到m的随机数 -->
+var arr = new Array(100,33,500,6,91);
+for(i=0;i<arr.length-1;i++){
+    for(j=i+1;j<arr.length;j++){
+       if( arr[i]<arr[j]){
+           var move=arr[j];
+           arr[j]=arr[i];
+           arr[i]=move;
+       }
+    }
+}
+console.log(arr)  
+ 	// strA = A~Z
+ 	// newStr += 'A'
+     newStr='';
+ 	var str='aBcDeFg';
+  console.log();
+  for( var i=0; i<str.length; i++ ){
+      if(str.charAt(i).match("[a-z]")==null){
+           newStr +=String( str.charAt(i)).toLowerCase();
+
+      }else{
+          newStr +=String(str.charAt(i)).toUpperCase();
+      }
+  }
+    document.write(newStr);
+    // 写一个函数，这个函数可以通过输入任意范围比如n到m来返回n到m的随机数
+    var n=50;
+    var  m=100;
+    var range=m-n;
+    var arr2=new Array(100);
+    for(i=0;i<arr2.length;i++){
+        arr2[i]=n+Math.ceil( Math.random()*range);
+    }
+    console.log(arr2);
+    
+    </script>
+    
+    <style>
+    
+    
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

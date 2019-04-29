@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <script>
+     var w=8;
+     var h=8;
+     for(var i=1;i<w;i++){//行
+         for(var j=i%2;j<h+i%2;j++){//列 i%2判定这行是奇数或者是偶数  如果是i是奇数，j就会从1开始然后8+1结束 ，i如果是偶数，j就会从0开始然后8结束
+             if(j%2==0){//偶数开始
+                 document.write("<span class='B'></span>");
+             }else{//奇数开始
+                 document.write("<span class='A'></span>");
+             }
+         }
+         document.write("<br>");   
+     }
+     
+    </script>
+    <style>
+    span{
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+        display: inline-block;
+        margin: -3px 0;
+    }
+    .A{
+        background-color:#c8c662;
+     
+    }
+    .B{
+        background-color: #79a16d;
+    }
+
+    
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
