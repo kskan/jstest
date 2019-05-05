@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log(Math.abs(100));
+        console.log(Math.abs(100))
+
+        console.log(Math.round(5.4), Math.round(5, .6))
+        console.log(Math.random())
+        console.log(Math.ceil(5.4), Math.ceil(5.6))
+
+        console.log(Math.ceil(5.4), Math.ceil(5.6))
+        console.log(Math.floor(5.4), Math.floor(5.6))
+
+        var b = Math.pow(1024, 1)
+        var kb = Math.pow(1024, 2)
+        console.log(b, kb);
+        console.log(parseInt(Math.random() * 10 + 1))
+
+        var arr = new Array(
+            '星期日',
+            '星期一',
+            '星期二',
+            '星期三',
+            '星期四',
+            '星期五',
+            '星期六'
+        )
+        console.log(arr.length);
+        console.log(arr[0])
+        var d = new Date();
+        var today = d.getDay();
+        console.log(today)
+        for (var i = 0; i < arr.length; i++) {
+            if (today != i) {
+                console.log(arr[i])
+            }
+        }
+        // arr3.sart()
+        // console.log(arr3)
+
+        var arr5 = ['a', 'b', 'c']
+        arr5.reverse();
+        console.log(arr5)
+
+        var sports = [
+            '高尔夫',
+            'NBA',
+            'CBA',
+            '英超',
+            '中超',
+            '斯诺克'
+        ]
+        
+        console.log(dotIndex);
+        var arr = new Array('a', 'b', 'c')
+        var newArrLength = arr.push('d')
+        console.log(newArrLength)
+        console.log(arr)
+        var arr1 = new Array()
+
+        for (var i = 0; i < 5; i++) {
+            arr1.push(i + 1)
+
+        }
+        console.log(arr1);
+
+        arr1.unshift(6)
+        console.log(arr1)
+
+        arr1.splice(0.0, 'abc')
+        console.log(arr1)
+
+        arr.splice(arr1.length, 0, 'xyz')
+        console.log(arr1)
+
+        var v3 = arr1.splice(0, 1)
+        console.log(arr, v3)
+
+        var v4 = arr1.splice(arr.length - 1, 1)
+        console.log(arr1, v4)
+
+        var arr2 = ['x', 'y', 'z']
+        var arr3 = [1, 2, 3]
+        var arr4 = ['i', 'ii', 'iii']
+        var arr5 = arr2.concat(arr3, arr4)
+        console.log(arr5)
+        var arr1 = [1, 2, 4, 3] 
+        var arr2 = ['a', 'c', 'd', 'b']
+        var arr3 = ['一', '二', '四', '三']
+        var arr4 = [100, 99, 3, 2000] 
+        arr1.sort()
+        console.log(arr1)
+        arr2.sort()
+        console.log(arr2)
+        arr3.sort()
+        console.log(arr3)
+        arr4.sort()
+        console.log(arr4)
+        var arr5 = ['a', 'b', 'c'];
+ 		arr5.reverse()
+ 		console.log(arr5)
+
+
+        var str = 'logo.300*300.png'
+        console.log(str.length)
+        console.log(str.charAt(2))
+        console.log(str.substr(0, 2))
+        console.log(str.substring(0, 3))
+        var dotIndex = str.indexOf('.')
+        var lastDotIndex = str.lastIndexOf('.')
+        console.log(lastDotIndex)
+        var exe=str.substr(lastDotIndex+1);
+        console.log(exe);
+        console.log(str.substr(-3));
+
+        var t1='mmp,你打篮球像菜xk'
+        var t2='***';
+        var t3='mmp';
+        var t4=t1.replace(t3,t2);
+        console.log(t4);
+        
+        var s=t1.search('m')
+        console.log(s)
+        var lowerStr='this is my house'
+        var upperStr='HELLO WORLD';
+        console.log(lowerStr.toUpperCase());
+        console.log(upperStr.toLowerCase());
+        
+
+
+        var o1={
+            name:'thisi is object',
+            getName:function(){
+                return this.name;
+
+            }
+        }
+        console.log(o1.getName())
+        
+        var PEOPLE =function(name,age,money){
+
+        var instance;
+        var _this=this;
+        function init(){
+            if(instance===undefined){
+                _this.name=name||'demo';
+                _this.age=age||18;
+                _this.money=money||10000;
+                _this.dadaima=function(){
+                    _this.money+=1000;
+
+                }
+                instance=_this;
+                return _this;
+
+            }
+            return instance;
+
+        }
+        init()
+        }
+        var p1=new PEOPLE('cxx');
+        var p2=new PEOPLE('xxx');
+        p1.dadaima()
+        p1.dadaima()
+        console.dir(p1)
+
+        var o1={
+            naem:'this is obejct',
+            getName:function(){
+                return this.name
+            }
+
+        }
+        console.log(o1.getName())
+        var PEOPLE =function(name,age,money){
+            this.name=name||'demo';
+            this.age=age||18;
+            this.money=money||10000;
+
+            this.dadadima=function(){
+                this.money+=1000;
+            }
+         
+        }
+        var p1=new PEOPLE('cxx')
+            var p2=new PEOPLE('xxx')
+            
+            p1.dadadima()
+            p1.dadadima()
+            console.dir(p1)
+         
+         
+
+    </script>
+
+</body>
+
+</html>
