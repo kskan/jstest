@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=function(){
+            this.name='a'
+        }
+        var b1=new a()
+        console.log(b1.name)
+        var b2={}
+        b2.__proto__=a.prototype;
+        a.call(b2)
+        console.log(b2.name)
+
+        var f1 = function() {}
+		var f2 = new Function()
+        function f3 () {}
+        
+        var o1={};
+        var o2=new Object()
+        var o3 =new f3()
+
+        console.log(typeof Object)
+        console.log(typeof Function)
+
+        console.log(typeof f1)
+        console.log(typeof f2)
+        console.log(typeof f3)
+
+        console.dir(f1)
+        console.dir(f2)
+        console.dir(f3)
+
+        console.dir(o1)
+        console.dir(o2)
+        console.dir(o3)
+
+        var person=function(name='kan'){
+            this.name=name
+        }
+        person.prototype={
+            money:'10000',
+            getName:function(){
+                return this.name;
+
+            },
+            getMoney:function(){
+                return this.money;
+            }
+        }
+        var zjh=new person('zjh');
+         
+         console.dir(zjh);
+         console.log(zjh.name);
+
+        console.log(person.__proto__===person.prototype);
+        console.log(person.prototype.__proto__===Object.prototype);
+        console.log(Object.prototype.__proto__===null);
+
+
+        console.log(person.__proto__===Function.prototype);
+        console.log(Function.prototype.__proto__===Function.prototype);
+        console.log(Object.prototype.__proto__===null);
+
+
+        console.log(Function.__proto__===Function.prototype);
+        console.log(Function.prototype.__proto__===Object.prototype);
+        console.log(Object.prototype.__proto__===null);
+
+        console.log(Object.__proto__===Function.prototype);
+        console.log(Function.prototype.__proto__===Object.prototype);
+        console.log(Object.prototype.__proto__===null)
+
+         
+        var a=function(){
+            this.name='a';
+        }
+
+
+        var b1=new a();
+        console.log(b1.name);
+
+        var b2={};
+        b2.__proto__=a.prototype;
+        // call(b2);
+        console.log(b2.name);
+
+        var animal=function(){}
+        var dog=function(){}
+        
+        animal.price=2000;
+        dog.prototype=animal;
+
+        // dog.prototype.price=animal.price;
+        var tidy=new dog();
+
+        console.log(dog.price);
+        console.log(tidy.price);
+
+        var str='aaa aac aaa @_@ This is Ken speaking.By 2019-05-5d';
+        console.log(str.match(/\d/));
+        console.log(str.match(/\D/));
+        console.log(str.match(/\s/));
+        console.log(str.match(/is/));
+        console.log(str.match(/\bis/));
+        console.log(str.match(/\d+/));
+        console.log(str.match(/k?/));
+        console.log(str.match(/a{2}/));
+        console.log(str.match(/\d{2,4}/g));
+        console.log(str.match(/d$/));
+        console.log(str.match(/^a/));
+        console.log(str.match(/aa[b|c|a]/g))
+        console.log(str.match(/[^0-9]/))
+        console.log(str.match(/a(?=i|k)/))
+
+        var str='<u>123</u><u>Abcadae</u><a href=""></a><u>123</u><u>Abcadae</u>';
+        console.log(str.match(/a/i))
+        console.log(str.match(/a/ig));
+        console.log(str.match(/<u>.*?<\/u>/));
+            console.log(str.match(/<u>.*<\/u>/));
+                var reg1=/ /;
+            console.dir(reg1);
+            var reg2=new RegExp()
+            console.dir(reg2)
+            var str='This is new world,2019-fine-5'
+            var r1 =str.search(/is/)
+            var r2=str.match(/\d+/g)
+            var r3=str.replace(/fine/,5)
+            console.log(r1,r2,r3);
+            console.log(/new/.test(str));
+            console.log(/NEW/.test(str))
+            console.log(/new/.exec(str));
+            console.log(/NEW/.exec(str))
+            
+
+        </script>
+    
+</body>
+</html>
