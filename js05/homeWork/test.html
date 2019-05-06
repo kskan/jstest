@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+<script>
+//         ## 正则匹配实操题
+
+// 1. 让 2019-5-5 变成 2019.5.5
+var time='2019-5-5'
+var reg=new RegExp('-',"g");
+time=time.replace(reg,'.');
+
+console.log(time)
+
+
+// 2. var str = "get-element-by-id";改成单词首字母大写
+
+var str="get-element-by-id";
+// var reg2=new RegExp('-',"g");
+// str=str.replace(reg,".")
+var nstr=str.split("-");
+for(i=0;i<nstr.length;i++){
+    nstr[i] = nstr[i].slice(0, 1).toUpperCase() + nstr[i].slice(1);
+    
+}
+str=nstr.join('-')
+console.log(str);
+// 3. 单词首字母都大写 var name = ' wengdo training camp';
+
+var name = ' wengdo training camp'
+function titleCase2(s) {  
+    return s.toLowerCase().replace(/\b([\w|']+)\b/g, function(word) {  
+        return word.replace(word.charAt(0), word.charAt(0).toUpperCase());  
+    });  
+}  
+console.log(titleCase2(name)); 
+// 4. 从一个字符串中提取链接地址。
+//  var str = '大家好，我是xxx... <a href="http://www.baidu.com">BaiduY夏</a>';
+var str2 = '大家好，我是xxx... <a href="http://www.baidu.com">BaiduY夏</a>'
+var nstr2=str2.split("\"");
+console.log(nstr2[1]);
+// 5. 写一个正则表达式,匹配 "<option value="gz">"
+//     <option value="gz">广州</option>
+var reg=new RegExp("<option value=\"gz\">",'g');
+var str3="<option value=\"gz\">广州</option>";
+console.log(reg.test(str3));
+
+// 6. 判断字符串是否包含数字
+
+//     var str1 = 'abc9efh';
+//     var str2 = 'abcefg';
+var str1 = 'abc9efh';
+var str2 = 'abcefg';
+// var reg =new RegExp('\d','g');
+var reg=/[0-9]/g;
+console.log(reg.test(str1));
+console.log(reg.test(str2));
+
+// 7. 判断连续重复字母
+
+    var str1 = 'abc3d4e5';
+    var str2 = 'aab2c3';
+    var reg=/\a{2}/g;
+    console.log(reg.test(str1));
+    console.log(reg.test(str2));
+
+// 8. 给定字符串 str，检查其是否符合美元书写格式
+//     1、以 $ 开始
+//     2、整数部分，从个位起，满 3 个数字用 , 分隔
+//     3、如果为小数，则小数部分长度为 2
+//     4、正确的格式如：$1,023,032.03 或者 $2.03，错误的格式如：$3,432,12.12 或者 $34,344.3
+function isUSD(str) {
+   return /^\$[1-9]\d{0,2}(,\d{3})*(\.\d{2})?$/.test(str);
+}
+console.log(isUSD('$1,023,032.03'))
+
+// 9. 将单词is替换为IS
+
+//     var str = 'English poetry is one of their great heritages';
+function isupdate(str){
+    return str.replace(/\sis\s/g,function(word){
+        return word.toUpperCase();
+    })
+}
+ 
+var ing='English poetry is one of their great heritages';
+console.log(isupdate(ing));
+
+
+
+    </script>
+
+</body>
+
+</html>

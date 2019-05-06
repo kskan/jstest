@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	<script type="text/javascript">
+		// 直接量语法：/pattern/attributes; 如/\d+/g 
+		// 正则表达式的构成
+		// 1.边界符/正则表达式/
+		// 2.模式 = 普通字符 + 元字符
+
+		// 创建正则
+		var reg1 = / /
+		console.dir(reg1)
+		var reg2 = new RegExp()
+		console.dir(reg2)
+
+		// 正则匹配常用函数
+		// str.search(/ /)   查找的字符串，-1
+		// str.match(/ /)    查找的字符串以及下标，null
+		// str.replace(/ /)  新的字符串，旧的字符串
+		// / /.test(str) 	 true , false
+		// / /.exec(str)	 查找的字符串以及下标，null
+		
+		var str = 'This is new world, 2019-fine-5'
+
+		var r1 = str.search(/is/); // 2
+
+		var r2 = str.match(/\d+/g); // 数组 [2019, 5]
+		// match 如果匹配一个，则还可以获取到该字符串的下标 index
+		
+		var r3 = str.replace(/fine/, 5) // This is new world, 2019-5-5
+		// 返回替换成功的字符串
+		
+		console.log(r1, r2, r3)
+
+
+		console.log(/new/.test(str)); // true
+		console.log(/NEW/.test(str)); // false
+
+		// exec() 找到则返回该字符串以及下标，否则返回null
+		console.log(/new/.exec(str))
+		console.log(/NEW/.exec(str)) 
+
+
+	</script>
+</body>
+</html>

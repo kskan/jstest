@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var animal = function(){};
+		var dog = function(){};
+
+		animal.price = 2000;
+		dog.prototype = animal;
+		
+		// dog.prototype.price = animal.price
+		
+		var tidy = new dog();
+		// tidy.__proto__ = dog.prototype
+
+
+
+		// 请问dog.price和tidy.price分别是多少?即下面两条语句的分别输出什么？
+		console.log(dog.price); // undefined
+		console.log(tidy.price); // 2000
+
+		// 继承的方式
+		
+	</script>
+</body>
+</html>

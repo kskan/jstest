@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// new的过程
+		var a = function (){
+			this.name = 'a'
+		}
+		// a.prototype //形式继承 明线
+		
+		var b1 = new a()
+
+		console.log(b1.name)
+
+		var b2 = {}
+		b2.__proto__ = a.prototype; // 实质继承 暗线
+		a.call(b2) // 将b2的this指向a对象
+
+		console.log(b2.name)
+
+	</script>
+</body>
+</html>
